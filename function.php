@@ -273,6 +273,8 @@ add_action('save_post', 'save_mystory');
 }
 }
 
+////// code Dropdown Menu /////////////
+
 function get_dropdown_part( $id ) {
 		global $post, $wpdb;
 		$query = $wpdb->get_results(sprintf('select * from %s where post_type = \'%s\' and post_parent = %d and post_status = \'%s\'', $wpdb->posts, 'story', $id, 'publish'));
